@@ -1,5 +1,17 @@
-import { capitalize } from 'lodash-es';
+import express, { json } from 'express';
 
-const a = capitalize('hola');
+const app = express();
 
-console.log(a);
+app.use(json());
+
+app.get('/', (req, res) => {
+  res.json({ success: true });
+});
+
+const config = {
+  port: 3200,
+};
+
+app.listen(config.port, () => {
+  console.log(`🚀 Server ready at: http://localhost:${config.port})`);
+});
