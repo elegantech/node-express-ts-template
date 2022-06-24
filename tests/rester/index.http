@@ -1,0 +1,6 @@
+GET / HTTP/1.1
+Host: localhost:3200
+Accept: application/json
+@hideHeaders
+@responseGrammar: JSON
+@responseCommands: ["atom-beautify:beautify-editor"]
