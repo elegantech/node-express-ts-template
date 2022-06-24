@@ -19,7 +19,7 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 2021,
         tsconfigRootDir: __dirname,
-        project: ['./tsconfig.json', './tsconfig.app.json'],
+        project: ['./tsconfig.json', './tsconfig.app.json', './tsconfig.spec.json', './tsconfig.node.json'],
       },
       settings: {
         'import/parsers': {
@@ -46,6 +46,8 @@ module.exports = {
       ],
 
       rules: {
+        'node/no-missing-import': 'off',
+        'node/no-unpublished-import': 'off',
         'import/no-unassigned-import': 'warn',
         'import/newline-after-import': ['warn', { count: 1 }],
         'import/order': [
