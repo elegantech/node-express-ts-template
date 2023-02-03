@@ -8,6 +8,7 @@
   "trailingComma": "es5",
 
   "xmlWhitespaceSensitivity": "ignore",
+  "multilineArraysWrapThreshold": 2,
 
   "overrides": []
 }
